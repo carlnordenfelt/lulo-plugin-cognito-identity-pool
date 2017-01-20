@@ -32,13 +32,13 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 The Custom Resource Lambda requires the following permissions for this plugin to work:
 ```
 {
-   "Effect": "Allow",
-   "Action": [
-       "cognito-idp:CreateUserPoolClient",
-       "cognito-idp:UpdateUserPoolClient",
-       "cognito-idp:DeleteUserPoolClient"
-   ],
-   "Resource": "*"
+    "Effect": "Allow",
+    "Action": [
+        "cognito-identity:CreateIdentityPool",
+        "cognito-identity:UpdateIdentityPool",
+        "cognito-identity:DeleteIdentityPool"
+    ],
+    "Resource": "*"
 }
 ```
 
