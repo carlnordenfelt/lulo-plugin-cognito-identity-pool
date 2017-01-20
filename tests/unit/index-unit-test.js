@@ -26,7 +26,7 @@ describe('Index unit tests', function () {
         };
 
         mockery.registerMock('aws-sdk', awsSdkStub);
-        subject = require('.././index');
+        subject = require('../../src/index');
     });
     beforeEach(function () {
         createIdentityPoolStub.reset().resetBehavior();
