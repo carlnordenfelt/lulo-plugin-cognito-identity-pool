@@ -11,22 +11,16 @@ npm install lulo-plugin-cognito-identity-pool --save
 
 ## Usage
 ### Properties
-* UserPoolId: Id of the User Pool. Required.
-* ClientName: Name of the client. Required.
+* IdentityPoolName: Name of the identity pool. Required.
+* AllowUnauthenticatedIdentities: boolean indicating if the pool allows unauthenticated access or not. Required.
 * For further properties, see the [AWS SDK Documentation for CognitoIdentity::createIdentityPool](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CognitoIdentity.html#createIdentityPool-property)
 
 ### Return Values
 
 #### Ref
-When the logical ID of this resource is provided to the Ref intrinsic function, Ref returns the **Client Id**.
+When the logical ID of this resource is provided to the Ref intrinsic function, Ref returns the **Identity Pool Id**.
 
-`{ "Ref": "Client" }`
-
-#### Fn::GetAtt
-
-**ClientSecret** If a ClientSecret is generated you can get it via
-
-`Fn::GetAtt["Client", "ClientSecret"]`
+`{ "Ref": "IdentityPool" }`
 
 ### Required IAM Permissions
 The Custom Resource Lambda requires the following permissions for this plugin to work:
